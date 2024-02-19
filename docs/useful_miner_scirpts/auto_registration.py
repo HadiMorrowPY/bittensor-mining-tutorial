@@ -13,9 +13,9 @@ Usage:
 """
 
 
-wallet = "name_of_your_coldkey"
-hotkeys = ["1","2","3"] #a list with the names of all the hotkeys you want to register
-highest_cost = 2.0 #The maximal amount of Tao you are willing to burn to register
+wallet = "default_2"
+hotkeys = ["default_2"] #a list with the names of all the hotkeys you want to register
+highest_cost = 0.000081474 #The maximal amount of Tao you are willing to burn to register
 password = "" #Password for your cold key
 
 import pexpect
@@ -31,7 +31,7 @@ while True:
         while True:
             try:
                 iterate=False
-                command = 'btcli recycle_register -subtensor.network finney --netuid 1 --wallet.name {} --wallet.hotkey {}'.format(wallet,hotkey)
+                command = 'btcli subnet recycle_register --netuid 30 --subtensor.network finney --wallet.name {} --wallet.hotkey {}'.format(wallet,hotkey)
                 # Get the current time
                 current_time = datetime.now().time()
                 
