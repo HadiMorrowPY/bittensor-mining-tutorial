@@ -31,7 +31,7 @@ while True:
         while True:
             try:
                 iterate=False
-                command = 'btcli subnet recycle_register --netuid 30 --subtensor.network finney --wallet.name {} --wallet.hotkey {}'.format(wallet,hotkey)
+                command = 'btcli subnet register --netuid 30 --subtensor.network finney --wallet.name {} --wallet.hotkey {}'.format(wallet,hotkey)
                 # Get the current time
                 current_time = datetime.now().time()
                 
